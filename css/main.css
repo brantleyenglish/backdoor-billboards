@@ -1,0 +1,65 @@
+body .page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden; }
+  body .page-wrapper > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute; }
+  body .page-wrapper .trucks-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    body .page-wrapper .trucks-wrapper li {
+      display: none; }
+      body .page-wrapper .trucks-wrapper li.active {
+        -webkit-animation: driving 10s linear infinite;
+                animation: driving 10s linear infinite;
+        display: block; }
+
+@-webkit-keyframes driving {
+  0% {
+    margin-left: 100%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    display: block; }
+  30% {
+    margin-left: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  95% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    margin: 0; } }
+
+@keyframes driving {
+  0% {
+    margin-left: 100%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    display: block; }
+  30% {
+    margin-left: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  95% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    margin: 0; } }
